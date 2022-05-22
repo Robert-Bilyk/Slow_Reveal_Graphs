@@ -13,7 +13,7 @@ font_add_google(name = "Courier Prime", family = "Main")
 
 showtext_auto()
 
-data <- read_xlsx(here::here("Plot Work", "table.xlsx")) %>%
+data <- read_xlsx(here::here("Plot Work", "Henry Gannett Total State Population 1890.xlsx")) %>%
   arrange(Population)
 
 data$State <- toupper(data$State)
