@@ -23,12 +23,11 @@ x <- ggplot(data, aes(x = pop, y = fct_rev(fct_inorder(State))), fill = NA) +
   geom_col(color = "black", fill = "black", width = 0.45, ) +
   labs(title = "POPULATION OF EACH STATE AND TERRITORY: 1890",
        subtitle = element_blank(),
-       tag = "(Hundreds of thousands.)",
-       x="STATES.")+
+       tag = "(Hundreds of thousands.)") +
   scale_fill_manual(values = c("#f1d9b5", "black")) +
   theme_bw() +
   theme(axis.text.x = element_text(family = "Main", size = 8),
-        axis.title.x.top = element_text(family = "Main", hjust = 0, vjust = 1, angle = 0), 
+        axis.title.x = element_blank(), 
         axis.ticks.x = element_line()) + 
   theme(axis.ticks.y = element_blank(), 
         axis.title.y = element_blank(),
@@ -52,10 +51,10 @@ print(x)
 
 
 grid.draw(segmentsGrob(x0 = 0.01, x1 = 0.01, y0 = 0.02, y1 = 0.91))
-grid.draw(segmentsGrob(x0 = 0.975, x1 = 0.975, y0 = 0.02, y1 = 0.91))
-grid.draw(segmentsGrob(x0 = 0.01, x1 = 0.975, y0 = 0.91, y1 = 0.91))
-grid.draw(segmentsGrob(x0 = 0.01, x1 = 0.975, y0 = 0.02, y1 = 0.02))
-grid.draw(textGrob("test", x=.5,y=.5, gp=gpar(fontsize=8, fontfamily="Main")))
+grid.draw(segmentsGrob(x0 = 0.935, x1 = 0.935, y0 = 0.02, y1 = 0.91))
+grid.draw(segmentsGrob(x0 = 0.01, x1 = 0.935, y0 = 0.91, y1 = 0.91))
+grid.draw(segmentsGrob(x0 = 0.01, x1 = 0.935, y0 = 0.02, y1 = 0.02))
+grid.draw(textGrob("STATES.", x=.1,y=.923, gp=gpar(fontsize=8, fontfamily="Main")))
 
 
 rect
