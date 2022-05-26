@@ -19,25 +19,22 @@ png(here::here("Plot Work", "1890 State Foreign Population - Henry Gannett", "5-
 
 ggplot(data, aes(x = Foreign, y = fct_rev(fct_inorder(State))), fill = NA) +
   geom_col(color = "black", fill = "black", width = 0.45 ) +
-  labs(tag = "(Hundreds of thousands.)") +
+  labs(tag = "(In thousands.)") +
   scale_x_continuous(position = "top", limits = c(0,1600), breaks=seq(100,1500,100)) +
   theme(axis.text.x = element_text(family = "Main", size = 6, color= "black"),
         axis.title.x = element_blank(), 
-        axis.ticks.x = element_line()) + 
-  theme(axis.ticks.y = element_blank(), 
-        axis.title.y = element_blank(),
-        axis.text.y = element_text(family = "Main", hjust = 0, size = 8, color = "black")) + 
-  theme(panel.border = element_blank(),
         panel.grid.major.x = element_line(color="black", size=.25),
-        panel.grid.minor = element_blank(),
+        axis.ticks.y = element_blank(), 
+        axis.title.y = element_blank(),
+        axis.text.y = element_text(family = "Main", hjust = 0, size = 8, color = "black"),
         panel.grid.major.y = element_blank(),
+        panel.grid.minor = element_blank(),
         panel.background = element_blank(),
-        plot.background = element_rect(linetype = 1, size = 1, fill = "#f1d9b5"), 
+        plot.background = element_rect(fill = "#f1d9b5"), 
         plot.title = element_blank(),
-        plot.margin = margin(20,10,10,10),
         plot.tag = element_text(family = "Main", color = "black", hjust = .5, vjust = 3, size = 7),
         plot.tag.position = "top",
-        legend.position = "none") 
+        plot.margin = margin(20,10,10,10))
 
 grid.draw(segmentsGrob(x0 = 0.01, x1 = 0.01, y0 = 0.012, y1 = 0.968))
 grid.draw(segmentsGrob(x0 = 0.95, x1 = 0.95, y0 = 0.012, y1 = 0.968))
@@ -54,26 +51,30 @@ dev.off()
 
 png(here::here("Plot Work", "1890 State Foreign Population - Henry Gannett", "1-Concealed-State-Foreign-Population-1890.png"),width=500,height=800)
 
-ggplot(data, mapping = aes(x = Foreign, y = fct_rev(fct_inorder(State)))) +
-  geom_col(color = "black", fill = "black", width = .45) +
+ggplot(data, aes(x = Foreign, y = fct_rev(fct_inorder(State))), fill = NA) +
+  geom_col(color = "black", fill = "black", width = 0.45 ) +
+  labs(tag = "(In thousands.)") +
   scale_x_continuous(position = "top", limits = c(0,1600), breaks=seq(100,1500,100)) +
   theme(axis.text.x = element_blank(),
-        axis.title.x = element_blank(),
-        axis.text.y = element_blank(),
-        axis.ticks.y = element_blank(),
+        axis.ticks.x = element_blank(),
+        axis.title.x = element_blank(), 
+        panel.grid.major.x = element_line(color="black", size=.25),
+        axis.ticks.y = element_blank(), 
         axis.title.y = element_blank(),
-        panel.grid.minor = element_blank(),
+        axis.text.y = element_blank(),
         panel.grid.major.y = element_blank(),
-        panel.grid.major.x = element_line( color = "black", size = .25),
-        plot.background = element_rect(fill = "#f1d9b5"),
-        plot.title = element_blank(),
+        panel.grid.minor = element_blank(),
         panel.background = element_blank(),
+        plot.background = element_rect(fill = "#f1d9b5"), 
+        plot.title = element_blank(),
+        plot.tag = element_blank(),
+        plot.tag.position = "top",
         plot.margin = margin(20,10,10,10))
 
-grid.draw(segmentsGrob(x0 = 0.067, x1 = 0.067, y0 = 0.012, y1 = 0.975))
-grid.draw(segmentsGrob(x0 = 0.935, x1 = 0.935, y0 = 0.012, y1 = 0.975))
+grid.draw(segmentsGrob(x0 = 0.067, x1 = 0.067, y0 = 0.012, y1 = 0.973))
+grid.draw(segmentsGrob(x0 = 0.935, x1 = 0.935, y0 = 0.012, y1 = 0.973))
 grid.draw(segmentsGrob(x0 = 0.067, x1 = 0.935, y0 = 0.012, y1 = 0.012))
-grid.draw(segmentsGrob(x0 = 0.067, x1 = 0.935, y0 = 0.975, y1 = 0.975))
+grid.draw(segmentsGrob(x0 = 0.067, x1 = 0.935, y0 = 0.973, y1 = 0.973))
 
 dev.off()
 
@@ -81,20 +82,23 @@ dev.off()
 
 png(here::here("Plot Work", "1890 State Foreign Population - Henry Gannett", "2-ForeignReveal-State-Foreign-Population-1890.png"),width=500,height=800)
 
-ggplot(data, mapping = aes(x = Foreign, y = fct_rev(fct_inorder(State)))) +
-  geom_col(color = "black", fill = "black", width = .45) +
+ggplot(data, aes(x = Foreign, y = fct_rev(fct_inorder(State))), fill = NA) +
+  geom_col(color = "black", fill = "black", width = 0.45 ) +
+  labs(tag = "(In thousands.)") +
   scale_x_continuous(position = "top", limits = c(0,1600), breaks=seq(100,1500,100)) +
-  theme(axis.text.x = element_text(family = "Main", color = "black", size = 6),
-        axis.title.x = element_blank(),
-        axis.text.y = element_blank(),
-        axis.ticks.y = element_blank(),
+  theme(axis.text.x = element_text(family = "Main", size = 6, color= "black"),
+        axis.title.x = element_blank(), 
+        panel.grid.major.x = element_line(color="black", size=.25),
+        axis.ticks.y = element_blank(), 
         axis.title.y = element_blank(),
-        panel.grid.minor = element_blank(),
+        axis.text.y = element_blank(),
         panel.grid.major.y = element_blank(),
-        panel.grid.major.x = element_line( color = "black", size = .25),
-        plot.background = element_rect(fill = "#f1d9b5"),
-        plot.title = element_blank(),
+        panel.grid.minor = element_blank(),
         panel.background = element_blank(),
+        plot.background = element_rect(fill = "#f1d9b5"), 
+        plot.title = element_blank(),
+        plot.tag = element_blank(),
+        plot.tag.position = "top",
         plot.margin = margin(20,10,10,10))
 
 grid.draw(segmentsGrob(x0 = 0.067, x1 = 0.067, y0 = 0.012, y1 = 0.978))
@@ -109,20 +113,23 @@ dev.off()
 
 png(here::here("Plot Work", "1890 State Foreign Population - Henry Gannett", "3-StateReveal-State-Foreign-Population-1890.png"),width=500,height=800)
 
-ggplot(data, mapping = aes(x = Foreign, y = fct_rev(fct_inorder(State)))) +
-  geom_col(color = "black", fill = "black", width = .45) +
+ggplot(data, aes(x = Foreign, y = fct_rev(fct_inorder(State))), fill = NA) +
+  geom_col(color = "black", fill = "black", width = 0.45 ) +
+  labs(tag = "(In thousands.)") +
   scale_x_continuous(position = "top", limits = c(0,1600), breaks=seq(100,1500,100)) +
-  theme(axis.text.x = element_text(family = "Main", color = "black", size = 6),
-        axis.title.x = element_blank(),
-        axis.text.y = element_text(family = "Main", color = "black", hjust = 0, size = 8),
-        axis.ticks.y = element_blank(),
+  theme(axis.text.x = element_text(family = "Main", size = 6, color= "black"),
+        axis.title.x = element_blank(), 
+        panel.grid.major.x = element_line(color="black", size=.25),
+        axis.ticks.y = element_blank(), 
         axis.title.y = element_blank(),
-        panel.grid.minor = element_blank(),
+        axis.text.y = element_text(family = "Main", hjust = 0, size = 8, color = "black"),
         panel.grid.major.y = element_blank(),
-        panel.grid.major.x = element_line( color = "black", size = .25),
-        plot.background = element_rect(fill = "#f1d9b5"),
-        plot.title = element_blank(),
+        panel.grid.minor = element_blank(),
         panel.background = element_blank(),
+        plot.background = element_rect(fill = "#f1d9b5"), 
+        plot.title = element_blank(),
+        plot.tag = element_blank(),
+        plot.tag.position = "top",
         plot.margin = margin(20,10,10,10))
 
 grid.draw(segmentsGrob(x0 = 0.01, x1 = 0.01, y0 = 0.012, y1 = 0.978))
@@ -140,33 +147,23 @@ dev.off()
 png(here::here("Plot Work", "1890 State Foreign Population - Henry Gannett", "4-UnitReveal-State-Foreign-Population-1890.png"),width=500,height=800)
 
 ggplot(data, aes(x = Foreign, y = fct_rev(fct_inorder(State))), fill = NA) +
-  geom_col(color = "black", fill = "black", width = 0.45, ) +
-  labs(title = "6. POPULATION OF EACH STATE AND TERRITORY: 1890",
-       subtitle = element_blank(),
-       tag = "(Hundreds of thousands.)") +
+  geom_col(color = "black", fill = "black", width = 0.45 ) +
+  labs(tag = "(In thousands.)") +
   scale_x_continuous(position = "top", limits = c(0,1600), breaks=seq(100,1500,100)) +
-  scale_fill_manual(values = c("#f1d9b5", "black")) +
-  theme_bw() +
   theme(axis.text.x = element_text(family = "Main", size = 6, color= "black"),
         axis.title.x = element_blank(), 
-        axis.ticks.x = element_line()) + 
-  theme(axis.ticks.y = element_blank(), 
+        panel.grid.major.x = element_line(color="black", size=.25),
+        axis.ticks.y = element_blank(), 
         axis.title.y = element_blank(),
-        axis.text.y = element_text(family = "Main", hjust = 0, size = 8, color = "black")) + 
-  theme(panel.border = element_blank(),
-        axis.ticks = element_line(size = .25),
-        panel.grid.major = element_line(color="black", size=.25),
-        panel.grid.minor = element_blank(),
+        axis.text.y = element_text(family = "Main", hjust = 0, size = 8, color = "black"),
         panel.grid.major.y = element_blank(),
+        panel.grid.minor = element_blank(),
         panel.background = element_blank(),
-        plot.background = element_rect(linetype = 1, size = 1, fill = "#f1d9b5"), 
+        plot.background = element_rect(fill = "#f1d9b5"), 
         plot.title = element_blank(),
-        plot.subtitle = element_blank(),
-        plot.margin = margin(20,10,10,10),
-        plot.tag = element_text(family = "Main", color = "black", hjust = .5, vjust = 4, size = 7),
+        plot.tag = element_text(family = "Main", color = "black", hjust = .5, vjust = 3, size = 7),
         plot.tag.position = "top",
-        legend.position = "none") +
-        coord_cartesian(clip = "off") 
+        plot.margin = margin(20,10,10,10))
 
 grid.draw(segmentsGrob(x0 = 0.01, x1 = 0.01, y0 = 0.012, y1 = 0.968))
 grid.draw(segmentsGrob(x0 = 0.95, x1 = 0.95, y0 = 0.012, y1 = 0.968))

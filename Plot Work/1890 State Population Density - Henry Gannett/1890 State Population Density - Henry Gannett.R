@@ -127,5 +127,3 @@ grid.draw(segmentsGrob(x0 = 0.005, x1 = 0.977, y0 = 0.012, y1 = 0.012))
 grid.draw(textGrob("STATES.", x=.13,y=.969, gp=gpar(fontsize=8, fontfamily="Main")))
 
 dev.off()
-
-
