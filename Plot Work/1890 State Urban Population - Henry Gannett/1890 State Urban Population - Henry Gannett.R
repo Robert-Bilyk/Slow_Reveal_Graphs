@@ -15,6 +15,11 @@ data$State <- toupper(data$State)
 data$`Urban Population` <- data$`Urban Population` / 1000000
 data$`Rural Population` <- data$`Rural Population` / 1000000
 
+data <- data %>%
+       pivot_longer(cols = c(`Urban Population`, `Rural Population`),
+             names_to = "Type",
+             values_to = "Population")
+
 
 #Full Graph
 
