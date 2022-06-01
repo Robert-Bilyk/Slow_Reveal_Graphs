@@ -34,7 +34,7 @@ ggplot(data, mapping = aes(x = Density, y = fct_rev(fct_inorder(State)))) +
 
 grid.draw(segmentsGrob(x0 = 0.005, x1 = 0.005, y0 = 0.012, y1 = 0.98))
 grid.draw(segmentsGrob(x0 = 0.977, x1 = 0.977, y0 = 0.012, y1 = 0.98))
-grid.draw(segmentsGrob(x0 = 0.241, x1 = 0.241, y0 = 0.012, y1 = 0.98))
+grid.draw(segmentsGrob(x0 = 0.242, x1 = 0.242, y0 = 0.012, y1 = 0.98))
 grid.draw(segmentsGrob(x0 = 0.005, x1 = 0.977, y0 = 0.96, y1 = 0.96))
 grid.draw(segmentsGrob(x0 = 0.005, x1 = 0.977, y0 = 0.98, y1 = 0.98))
 grid.draw(segmentsGrob(x0 = 0.005, x1 = 0.977, y0 = 0.012, y1 = 0.012))
@@ -50,9 +50,9 @@ png(here::here("Plot Work", "1890 State Population Density - Henry Gannett", "1-
 ggplot(data, mapping = aes(x = Density, y = fct_rev(fct_inorder(State)))) +
   geom_col(color = "black", fill = "black", width = .45) +
   scale_x_continuous(position= "top" ,limits = c(0,325), breaks = seq(25,325,25)) +
-  theme(axis.text.x = element_blank(),
+  theme(axis.text.x = element_text(family = "Main", color = "#f1d9b5", size = 8),
         axis.title.x = element_blank(),
-        axis.text.y = element_blank(),
+        axis.text.y = element_text(family = "Main", color = "#f1d9b5", hjust = 0, size = 8),
         axis.ticks.y = element_blank(),
         axis.title.y = element_blank(),
         panel.grid.minor = element_blank(),
@@ -63,10 +63,10 @@ ggplot(data, mapping = aes(x = Density, y = fct_rev(fct_inorder(State)))) +
         panel.background = element_blank(),
         plot.margin = margin(20,10,10,10))
 
-grid.draw(segmentsGrob(x0 = 0.069, x1 = 0.069, y0 = 0.012, y1 = 0.975))
-grid.draw(segmentsGrob(x0 = 0.977, x1 = 0.977, y0 = 0.012, y1 = 0.975))
-grid.draw(segmentsGrob(x0 = 0.069, x1 = 0.977, y0 = 0.975, y1 = 0.975))
-grid.draw(segmentsGrob(x0 = 0.069, x1 = 0.977, y0 = 0.012, y1 = 0.012))
+grid.draw(segmentsGrob(x0 = 0.977, x1 = 0.977, y0 = 0.012, y1 = 0.96))
+grid.draw(segmentsGrob(x0 = 0.242, x1 = 0.241, y0 = 0.012, y1 = 0.96))
+grid.draw(segmentsGrob(x0 = 0.242, x1 = 0.977, y0 = 0.96, y1 = 0.96))
+grid.draw(segmentsGrob(x0 = 0.242, x1 = 0.977, y0 = 0.012, y1 = 0.012))
 
 dev.off()
 
@@ -79,7 +79,7 @@ ggplot(data, mapping = aes(x = Density, y = fct_rev(fct_inorder(State)))) +
   scale_x_continuous(position= "top" ,limits = c(0,325), breaks = seq(25,325,25)) +
   theme(axis.text.x = element_text(family = "Main", color = "black", size = 8),
         axis.title.x = element_blank(),
-        axis.text.y = element_blank(),
+        axis.text.y = element_text(family = "Main", color = "#f1d9b5", hjust = 0, size = 8),
         axis.ticks.y = element_blank(),
         axis.title.y = element_blank(),
         panel.grid.minor = element_blank(),
@@ -90,11 +90,11 @@ ggplot(data, mapping = aes(x = Density, y = fct_rev(fct_inorder(State)))) +
         panel.background = element_blank(),
         plot.margin = margin(20,10,10,10))
 
-grid.draw(segmentsGrob(x0 = 0.069, x1 = 0.069, y0 = 0.012, y1 = 0.98))
 grid.draw(segmentsGrob(x0 = 0.977, x1 = 0.977, y0 = 0.012, y1 = 0.98))
-grid.draw(segmentsGrob(x0 = 0.069, x1 = 0.977, y0 = 0.96, y1 = 0.96))
-grid.draw(segmentsGrob(x0 = 0.069, x1 = 0.977, y0 = 0.98, y1 = 0.98))
-grid.draw(segmentsGrob(x0 = 0.069, x1 = 0.977, y0 = 0.012, y1 = 0.012))
+grid.draw(segmentsGrob(x0 = 0.241, x1 = 0.241, y0 = 0.012, y1 = 0.98))
+grid.draw(segmentsGrob(x0 = 0.241, x1 = 0.977, y0 = 0.96, y1 = 0.96))
+grid.draw(segmentsGrob(x0 = 0.241, x1 = 0.977, y0 = 0.98, y1 = 0.98))
+grid.draw(segmentsGrob(x0 = 0.241, x1 = 0.977, y0 = 0.012, y1 = 0.012))
 
 dev.off()
 

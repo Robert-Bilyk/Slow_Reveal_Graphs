@@ -55,26 +55,25 @@ ggplot(data, aes(x = Foreign, y = fct_rev(fct_inorder(State))), fill = NA) +
   geom_col(color = "black", fill = "black", width = 0.45 ) +
   labs(tag = "(In thousands.)") +
   scale_x_continuous(position = "top", limits = c(0,1600), breaks=seq(100,1500,100)) +
-  theme(axis.text.x = element_blank(),
-        axis.ticks.x = element_blank(),
+  theme(axis.text.x = element_text(family = "Main", size = 6, color= "#f1d9b5"),
         axis.title.x = element_blank(), 
         panel.grid.major.x = element_line(color="black", size=.25),
         axis.ticks.y = element_blank(), 
         axis.title.y = element_blank(),
-        axis.text.y = element_blank(),
+        axis.text.y = element_text(family = "Main", hjust = 0, size = 8, color = "#f1d9b5"),
         panel.grid.major.y = element_blank(),
         panel.grid.minor = element_blank(),
         panel.background = element_blank(),
         plot.background = element_rect(fill = "#f1d9b5"), 
         plot.title = element_blank(),
-        plot.tag = element_blank(),
+        plot.tag = element_text(family = "Main", color = "#f1d9b5", hjust = .5, vjust = 3, size = 7),
         plot.tag.position = "top",
         plot.margin = margin(20,10,10,10))
 
-grid.draw(segmentsGrob(x0 = 0.067, x1 = 0.067, y0 = 0.012, y1 = 0.973))
-grid.draw(segmentsGrob(x0 = 0.935, x1 = 0.935, y0 = 0.012, y1 = 0.973))
-grid.draw(segmentsGrob(x0 = 0.067, x1 = 0.935, y0 = 0.012, y1 = 0.012))
-grid.draw(segmentsGrob(x0 = 0.067, x1 = 0.935, y0 = 0.973, y1 = 0.973))
+grid.draw(segmentsGrob(x0 = 0.95, x1 = 0.95, y0 = 0.012, y1 = 0.953))
+grid.draw(segmentsGrob(x0 = 0.243, x1 = 0.243, y0 = 0.012, y1 = 0.953))
+grid.draw(segmentsGrob(x0 = 0.243, x1 = 0.95, y0 = 0.953, y1 = 0.953))
+grid.draw(segmentsGrob(x0 = 0.243, x1 = 0.95, y0 = 0.012, y1 = 0.012))
 
 dev.off()
 
@@ -91,21 +90,21 @@ ggplot(data, aes(x = Foreign, y = fct_rev(fct_inorder(State))), fill = NA) +
         panel.grid.major.x = element_line(color="black", size=.25),
         axis.ticks.y = element_blank(), 
         axis.title.y = element_blank(),
-        axis.text.y = element_blank(),
+        axis.text.y = element_text(family = "Main", hjust = 0, size = 8, color = "#f1d9b5"),
         panel.grid.major.y = element_blank(),
         panel.grid.minor = element_blank(),
         panel.background = element_blank(),
         plot.background = element_rect(fill = "#f1d9b5"), 
         plot.title = element_blank(),
-        plot.tag = element_blank(),
+        plot.tag = element_text(family = "Main", color = "#f1d9b5", hjust = .5, vjust = 3, size = 7),
         plot.tag.position = "top",
         plot.margin = margin(20,10,10,10))
 
-grid.draw(segmentsGrob(x0 = 0.067, x1 = 0.067, y0 = 0.012, y1 = 0.978))
-grid.draw(segmentsGrob(x0 = 0.935, x1 = 0.935, y0 = 0.012, y1 = 0.978))
-grid.draw(segmentsGrob(x0 = 0.067, x1 = 0.935, y0 = 0.978, y1 = 0.978))
-grid.draw(segmentsGrob(x0 = 0.067, x1 = 0.935, y0 = 0.963, y1 = 0.963))
-grid.draw(segmentsGrob(x0 = 0.067, x1 = 0.935, y0 = 0.012, y1 = 0.012))
+grid.draw(segmentsGrob(x0 = 0.95, x1 = 0.95, y0 = 0.012, y1 = 0.968))
+grid.draw(segmentsGrob(x0 = 0.243, x1 = 0.243, y0 = 0.012, y1 = 0.968))
+grid.draw(segmentsGrob(x0 = 0.243, x1 = 0.95, y0 = 0.968, y1 = 0.968))
+grid.draw(segmentsGrob(x0 = 0.243, x1 = 0.95, y0 = 0.953, y1 = 0.953))
+grid.draw(segmentsGrob(x0 = 0.243, x1 = 0.95, y0 = 0.012, y1 = 0.012))
 
 dev.off()
 
@@ -128,17 +127,17 @@ ggplot(data, aes(x = Foreign, y = fct_rev(fct_inorder(State))), fill = NA) +
         panel.background = element_blank(),
         plot.background = element_rect(fill = "#f1d9b5"), 
         plot.title = element_blank(),
-        plot.tag = element_blank(),
+        plot.tag = element_text(family = "Main", color = "#f1d9b5", hjust = .5, vjust = 3, size = 7),
         plot.tag.position = "top",
         plot.margin = margin(20,10,10,10))
 
-grid.draw(segmentsGrob(x0 = 0.01, x1 = 0.01, y0 = 0.012, y1 = 0.978))
-grid.draw(segmentsGrob(x0 = 0.95, x1 = 0.95, y0 = 0.012, y1 = 0.978))
-grid.draw(segmentsGrob(x0 = 0.243, x1 = 0.243, y0 = 0.012, y1 = 0.978))
-grid.draw(segmentsGrob(x0 = 0.01, x1 = 0.95, y0 = 0.963, y1 = 0.963))
-grid.draw(segmentsGrob(x0 = 0.01, x1 = 0.95, y0 = 0.978, y1 = 0.978))
+grid.draw(segmentsGrob(x0 = 0.01, x1 = 0.01, y0 = 0.012, y1 = 0.968))
+grid.draw(segmentsGrob(x0 = 0.95, x1 = 0.95, y0 = 0.012, y1 = 0.968))
+grid.draw(segmentsGrob(x0 = 0.243, x1 = 0.243, y0 = 0.012, y1 = 0.968))
+grid.draw(segmentsGrob(x0 = 0.01, x1 = 0.95, y0 = 0.968, y1 = 0.968))
+grid.draw(segmentsGrob(x0 = 0.01, x1 = 0.95, y0 = 0.953, y1 = 0.953))
 grid.draw(segmentsGrob(x0 = 0.01, x1 = 0.95, y0 = 0.012, y1 = 0.012))
-grid.draw(textGrob("STATES.", x=.13,y=.97, gp=gpar(fontsize=8, fontfamily="Main")))
+grid.draw(textGrob("STATES.", x=.13,y=.961, gp=gpar(fontsize=8, fontfamily="Main")))
 
 dev.off()
 
@@ -168,9 +167,9 @@ ggplot(data, aes(x = Foreign, y = fct_rev(fct_inorder(State))), fill = NA) +
 grid.draw(segmentsGrob(x0 = 0.01, x1 = 0.01, y0 = 0.012, y1 = 0.968))
 grid.draw(segmentsGrob(x0 = 0.95, x1 = 0.95, y0 = 0.012, y1 = 0.968))
 grid.draw(segmentsGrob(x0 = 0.243, x1 = 0.243, y0 = 0.012, y1 = 0.968))
-grid.draw(segmentsGrob(x0 = 0.01, x1 = 0.95, y0 = 0.953, y1 = 0.953))
 grid.draw(segmentsGrob(x0 = 0.01, x1 = 0.95, y0 = 0.968, y1 = 0.968))
+grid.draw(segmentsGrob(x0 = 0.01, x1 = 0.95, y0 = 0.953, y1 = 0.953))
 grid.draw(segmentsGrob(x0 = 0.01, x1 = 0.95, y0 = 0.012, y1 = 0.012))
-grid.draw(textGrob("STATES.", x=.13,y=.96, gp=gpar(fontsize=8, fontfamily="Main")))
+grid.draw(textGrob("STATES.", x=.13,y=.961, gp=gpar(fontsize=8, fontfamily="Main")))
 
 dev.off()
