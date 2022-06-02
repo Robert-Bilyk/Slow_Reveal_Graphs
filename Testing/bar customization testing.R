@@ -34,7 +34,7 @@ y = c( rep(1.0, 22), rep(0.2, 12), rep(0.7, 7), rep(1,10))
 
 ref = data.frame(x = x, y = y)
 
-coral = system.file("img", "test.jpg", package="ggpattern")
+coral = system.file("img", "x cross pattern.jpg", package="ggpattern")
 
 p = ggplot(ref, aes(x = x, y = y))+
   scale_y_reverse(lim = c(1, 0))+
