@@ -16,7 +16,10 @@ df1 = data.frame(percent, year)
 
 x_axis_text <- c(0, 10, 20)
 
-# plotting the graph
+# full graph
+
+png(here::here("Continued Plot Work", "Proportion of Negros to Total Population - Henry Gannett", "4-Final-N/T-Pop.png"),width=500,height=800)
+
 ggplot(df1, aes(x = percent, y = year)) +
   geom_bar(stat = "identity", width = 0.4, fill = "gray21") +
   scale_y_discrete(expand = c(0,0), limits = rev) +
@@ -42,3 +45,5 @@ ggplot(df1, aes(x = percent, y = year)) +
         panel.grid.minor = element_blank(),
         panel.background = element_rect(fill = "white", colour = "white"),
         plot.background = element_rect(fill = "white", colour = "white"))
+
+dev.off()
