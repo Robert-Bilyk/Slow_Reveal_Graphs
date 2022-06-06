@@ -236,13 +236,3 @@ plot7 <- ggplot(df) +
         panel.background = element_rect(fill = "white", colour = "white"),
         plot.background = element_rect(fill = "white", colour = "white")) +
   theme(plot.margin = margin(1,1,1.5,1.2, "cm"))
-
-
-# Complete Slow Reveal
-plot1
-plot2
-plot3
-plot4
-plot5
-plot6
-plot7
