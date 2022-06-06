@@ -16,9 +16,10 @@ df1 = data.frame(percent, year)
 
 x_axis_text <- c(0, 10, 20)
 
+
 # full graph
 
-png(here::here("Continued Plot Work", "Proportion of Negros to Total Population - Henry Gannett", "4-Final-N/T-Pop.png"),width=500,height=800)
+png(here::here("Continued Plot Work", "Proportion of Negros to Total Population - Henry Gannett", "3-Final-NT-Pop.png"),width=900,height=700)
 
 ggplot(df1, aes(x = percent, y = year)) +
   geom_bar(stat = "identity", width = 0.4, fill = "gray21") +
@@ -40,6 +41,106 @@ ggplot(df1, aes(x = percent, y = year)) +
                                    face = "bold.italic", family = "Dynalight", size = 13)) +
   theme(axis.ticks.y = element_blank(), 
         axis.title.x = element_text(color = "gray21", family = "Puritan", hjust = 1)) + 
+  theme(panel.border = element_rect(fill = NA),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_rect(fill = "white", colour = "white"),
+        plot.background = element_rect(fill = "white", colour = "white"))
+
+dev.off()
+
+
+## concealed
+
+png(here::here("Continued Plot Work", "Proportion of Negros to Total Population - Henry Gannett", "1-Concealed-NT-Pop.png"),width=900,height=700)
+
+ggplot(df1, aes(x = percent, y = year)) +
+  geom_bar(stat = "identity", width = 0.4, fill = "gray21") +
+  scale_y_discrete(expand = c(0,0), limits = rev) +
+  scale_x_continuous(labels = x_axis_text, expand = c(0,0), position = "top",
+                     breaks = seq(0, 20, by = 10)) +
+  labs(title = "PLATE II.",
+       subtitle = "PROPORTION OF THE NEGRO ELEMENT TO THE TOTAL \nPOPULATION") +
+  geom_vline(xintercept = 0:20 , linetype = "solid", 
+             color = "gray21", size = 0.6) +
+  geom_vline(xintercept = c(10,20), linetype = "solid", 
+             color = "gray21", size = 1.2) +
+  labs(x = "Per Cent.", y = NULL) +
+  theme(plot.title = element_text(hjust = 1, face = "bold",family = "Puritan", colour = "white"),
+        plot.subtitle = element_text(hjust = 0.5, face = "bold", family = "Puritan", size = 15, color = "white"))+
+  theme(axis.text.x = element_text(colour = "white", 
+                                   face = "bold", family = "Dynalight", size = 13),
+        axis.text.y = element_text(colour = "white", 
+                                   face = "bold.italic", family = "Dynalight", size = 13)) +
+  theme(axis.ticks.y = element_blank(), 
+        axis.title.x = element_text(color = "white", family = "Puritan", hjust = 1)) + 
+  theme(panel.border = element_rect(fill = NA),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_rect(fill = "white", colour = "white"),
+        plot.background = element_rect(fill = "white", colour = "white"))
+
+dev.off()
+
+
+## Reveal Years
+
+png(here::here("Continued Plot Work", "Proportion of Negros to Total Population - Henry Gannett", "2-RevealYears-NT-Pop.png"),width=900,height=700)
+
+ggplot(df1, aes(x = percent, y = year)) +
+  geom_bar(stat = "identity", width = 0.4, fill = "gray21") +
+  scale_y_discrete(expand = c(0,0), limits = rev) +
+  scale_x_continuous(labels = x_axis_text, expand = c(0,0), position = "top",
+                     breaks = seq(0, 20, by = 10)) +
+  labs(title = "PLATE II.",
+       subtitle = "PROPORTION OF THE NEGRO ELEMENT TO THE TOTAL \nPOPULATION") +
+  geom_vline(xintercept = 0:20 , linetype = "solid", 
+             color = "gray21", size = 0.6) +
+  geom_vline(xintercept = c(10,20), linetype = "solid", 
+             color = "gray21", size = 1.2) +
+  labs(x = "Per Cent.", y = NULL) +
+  theme(plot.title = element_text(hjust = 1, face = "bold",family = "Puritan", colour = "white"),
+        plot.subtitle = element_text(hjust = 0.5, face = "bold", family = "Puritan", size = 15, color = "white"))+
+  theme(axis.text.x = element_text(colour = "white", 
+                                   face = "bold", family = "Dynalight", size = 13),
+        axis.text.y = element_text(colour = "gray21", 
+                                   face = "bold.italic", family = "Dynalight", size = 13)) +
+  theme(axis.ticks.y = element_blank(), 
+        axis.title.x = element_text(color = "white", family = "Puritan", hjust = 1)) + 
+  theme(panel.border = element_rect(fill = NA),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_rect(fill = "white", colour = "white"),
+        plot.background = element_rect(fill = "white", colour = "white"))
+
+dev.off()
+
+
+
+## Reveal Years
+
+png(here::here("Continued Plot Work", "Proportion of Negros to Total Population - Henry Gannett", "2-RevealYears-NT-Pop.png"),width=900,height=700)
+
+ggplot(df1, aes(x = percent, y = year)) +
+  geom_bar(stat = "identity", width = 0.4, fill = "gray21") +
+  scale_y_discrete(expand = c(0,0), limits = rev) +
+  scale_x_continuous(labels = x_axis_text, expand = c(0,0), position = "top",
+                     breaks = seq(0, 20, by = 10)) +
+  labs(title = "PLATE II.",
+       subtitle = "PROPORTION OF THE NEGRO ELEMENT TO THE TOTAL \nPOPULATION") +
+  geom_vline(xintercept = 0:20 , linetype = "solid", 
+             color = "gray21", size = 0.6) +
+  geom_vline(xintercept = c(10,20), linetype = "solid", 
+             color = "gray21", size = 1.2) +
+  labs(x = "Per Cent.", y = NULL) +
+  theme(plot.title = element_text(hjust = 1, face = "bold",family = "Puritan", colour = "white"),
+        plot.subtitle = element_text(hjust = 0.5, face = "bold", family = "Puritan", size = 15, color = "white"))+
+  theme(axis.text.x = element_text(colour = "white", 
+                                   face = "bold", family = "Dynalight", size = 13),
+        axis.text.y = element_text(colour = "gray21", 
+                                   face = "bold.italic", family = "Dynalight", size = 13)) +
+  theme(axis.ticks.y = element_blank(), 
+        axis.title.x = element_text(color = "white", family = "Puritan", hjust = 1)) + 
   theme(panel.border = element_rect(fill = NA),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
