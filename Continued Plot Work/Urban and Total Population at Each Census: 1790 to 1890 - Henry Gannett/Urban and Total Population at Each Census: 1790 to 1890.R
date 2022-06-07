@@ -43,99 +43,118 @@ Ext_Pop_Graph <- Ext_Pop_Density %>%
          Population = Ext_Population / 1000000) %>% 
   select(Urban_Pop, Censuses, Population)
 
-png("Urban-Pop.png",width=900,height=500)
+
+#Final Graph
+
+png(here::here("Continued Plot Work", "Urban and Total Population at Each Census: 1790 to 1890 - Henry Gannett", "4-Final-UaTP.png"),width=1000,height=400)
+
 ggplot(Urban_Pop_Graph) +
   # Total population
   geom_col(aes(y = Censuses, x = Population), width = .6, color = "black", fill = "white", alpha = 0) +
   # Urban Population overlaid on total population
   geom_col(aes(y = Censuses, x = Urban_Pop), width = .6, fill = "black") +
-  labs(x = "[Millions of Inhabitants]", y = "", title = "Urban and Total Population at Each Census: 1790 to 1890",
-       subtitle = "   The total length of each bar represents the aggregate population, while the black portion of each bar indicates the urban element--that is, the population contained in cities \nhaving 8000 inhabitants or more.") +
+  labs(x = "[Millions of Inhabitants]", y = "", title = "Urban and Total Population at Each Census: 1790 to 1890") +
   scale_y_discrete(limits = rev) +
   # Add box to go around the census years
   coord_cartesian(xlim = c(.4, 62)) +
   scale_x_continuous(breaks = seq(0,60, by = 10), position = "top", limits = c(0,70)) +
   theme_linedraw() +
   theme(axis.title = element_text(size = 6, family = "serif"),
-        plot.title = element_text(size = 8, family = "Puritan", hjust = .5, vjust = -10),
-        plot.subtitle = element_text(size = 8.5, family = "Puritan", vjust = -119, hjust = .001),
+        plot.title = element_text(size = 10, family = "Puritan", hjust = .5, vjust = -1),
         axis.title.y = element_text(hjust = .5),
-        axis.text.y = element_text(size = 7, margin = margin(l = 20, r = -29)),
-        axis.text.x = element_text(size = 6),
+        axis.text.y = element_text(size = 7, margin = margin(l = 20, r = -29), color="black"),
+        axis.text.x = element_text(size = 6, color="black"),
         axis.ticks = element_blank(),
         panel.grid.minor.x = element_blank(),
         panel.grid.major.y = element_blank(),
-        # Make the graph wider instead of taller
-        aspect.ratio = .3,
-        panel.border = element_rect(fill = NA, size = 1.25)
-  ) 
+        panel.grid.major.x = element_line(size = .4),
+        panel.border = element_rect(size = .9))
+
 dev.off()
 
-# Creating graph extending through 1910
-png("Ext-Urban-Pop.png",width=900,height=500)
-ggplot(Ext_Pop_Graph) +
+
+#Concealed Graph
+
+png(here::here("Continued Plot Work", "Urban and Total Population at Each Census: 1790 to 1890 - Henry Gannett", "1-Concealed-UaTP.png"),width=1000,height=400)
+
+ggplot(Urban_Pop_Graph) +
   # Total population
   geom_col(aes(y = Censuses, x = Population), width = .6, color = "black", fill = "white", alpha = 0) +
   # Urban Population overlaid on total population
   geom_col(aes(y = Censuses, x = Urban_Pop), width = .6, fill = "black") +
-  labs(x = "[Millions of Inhabitants]", y = "", title = "Urban and Total Population at Each Census: 1790 to 1890",
-       subtitle = "   The total length of each bar represents the aggregate population, while the black portion of each bar indicates the urban element--that is, the population contained in cities \nhaving 8000 inhabitants or more.") +
+  labs(x = "[Millions of Inhabitants]", y = "", title = "Urban and Total Population at Each Census: 1790 to 1890") +
   scale_y_discrete(limits = rev) +
   # Add box to go around the census years
-  coord_cartesian(xlim = c(.4, 92)) +
-  scale_x_continuous(breaks = seq(0,90, by = 10), position = "top", limits = c(0,92)) +
+  coord_cartesian(xlim = c(.4, 62)) +
+  scale_x_continuous(breaks = seq(0,60, by = 10), position = "top", limits = c(0,70)) +
   theme_linedraw() +
-  theme(axis.title = element_text(size = 6, family = "serif"),
-        plot.title = element_text(size = 8, family = "Puritan", hjust = .5, vjust = -10),
-        plot.subtitle = element_text(size = 8.5, family = "Puritan", vjust = -119, hjust = .001),
-        axis.title.y = element_text(hjust = .5),
-        axis.text.y = element_text(size = 7, margin = margin(l = 20, r = -29)),
-        axis.text.x = element_text(size = 6),
+  theme(axis.title = element_text(size = 6, family = "serif",color="white"),
+        plot.title = element_text(size = 10, family = "Puritan", hjust = .5, vjust = -1, color="white"),
+        axis.title.y = element_text(hjust = .5, color="white"),
+        axis.text.y = element_text(size = 7, margin = margin(l = 20, r = -29), color="white"),
+        axis.text.x = element_text(size = 6, color="white"),
         axis.ticks = element_blank(),
         panel.grid.minor.x = element_blank(),
         panel.grid.major.y = element_blank(),
-        # Make the graph wider instead of taller
-        aspect.ratio = .3,
-        panel.border = element_rect(fill = NA, size = 1.25)
-  ) 
+        panel.grid.major.x = element_line(size = .4),
+        panel.border = element_rect(size = .9))
+
 dev.off()
 
-year <- c("1910", "1920", "1930", "1940")
-total <- c(91972266,105710620,122775046,131669275)
-urban <- c(42166120,54304603,68954823,74423702)
 
-New_Urban_Pop <- tibble(year,total,urban)
+#Reveal Pop
 
-New_Pop_Graph <- New_Urban_Pop %>% 
-  mutate(Urban_Pop = urban / 1000000,
-         Censuses = as.character(year),
-         Population = total / 1000000) %>% 
-  select(Urban_Pop, Censuses, Population)
+png(here::here("Continued Plot Work", "Urban and Total Population at Each Census: 1790 to 1890 - Henry Gannett", "2-RevealPop-UaTP.png"),width=1000,height=400)
 
-png("Urban-1910-1940.png",width=700,height=280)
-ggplot(New_Pop_Graph) +
+ggplot(Urban_Pop_Graph) +
   # Total population
-  geom_col(aes(y = Censuses, x = Population), width = .4, color = "black", fill = "white", alpha = 0) +
+  geom_col(aes(y = Censuses, x = Population), width = .6, color = "black", fill = "white", alpha = 0) +
   # Urban Population overlaid on total population
-  geom_col(aes(y = Censuses, x = Urban_Pop), width = .4, fill = "black") +
-  labs(x = "[Millions of Inhabitants]", y = "", title = "Urban and Total Population at Each Census: 1910 to 1940",
-       caption = "   The total length of each bar represents the aggregate population, while the black portion of each bar indicates the urban element--that is, the population contained in cities \nhaving 2500 inhabitants or more.") +
+  geom_col(aes(y = Censuses, x = Urban_Pop), width = .6, fill = "black") +
+  labs(x = "[Millions of Inhabitants]", y = "", title = "Urban and Total Population at Each Census: 1790 to 1890") +
   scale_y_discrete(limits = rev) +
   # Add box to go around the census years
-  coord_cartesian(xlim = c(0, 130), ylim = c()) +
-  scale_x_continuous(breaks = seq(0,130, by = 10), position = "top", limits = c(0,150)) +
+  coord_cartesian(xlim = c(.4, 62)) +
+  scale_x_continuous(breaks = seq(0,60, by = 10), position = "top", limits = c(0,70)) +
   theme_linedraw() +
-  theme(axis.title = element_text(size = 6, family = "serif"),
-        plot.title = element_text(size = 8, family = "Puritan", hjust = .5, vjust = -1.5),
-        plot.caption = element_text(size = 7, family = "Puritan", vjust = 0, hjust = .001),
-        axis.title.y = element_text(hjust = .5),
-        axis.text.y = element_text(size = 7, margin = margin(l = 20, r = -27)),
-        axis.text.x = element_text(size = 6),
+  theme(axis.title = element_text(size = 6, family = "serif",color="black"),
+        plot.title = element_text(size = 10, family = "Puritan", hjust = .5, vjust = -1, color="white"),
+        axis.title.y = element_text(hjust = .5, color="white"),
+        axis.text.y = element_text(size = 7, margin = margin(l = 20, r = -29), color="white"),
+        axis.text.x = element_text(size = 6, color="black"),
         axis.ticks = element_blank(),
         panel.grid.minor.x = element_blank(),
         panel.grid.major.y = element_blank(),
-        # Make the graph wider instead of taller
-        aspect.ratio = .3,
-        panel.border = element_rect(fill = NA, size = 1.25)
-  ) 
+        panel.grid.major.x = element_line(size = .4),
+        panel.border = element_rect(size = .9))
+
+dev.off()
+
+
+#Reveal Year
+
+png(here::here("Continued Plot Work", "Urban and Total Population at Each Census: 1790 to 1890 - Henry Gannett", "3-RevealYear-UaTP.png"),width=1000,height=400)
+
+ggplot(Urban_Pop_Graph) +
+  # Total population
+  geom_col(aes(y = Censuses, x = Population), width = .6, color = "black", fill = "white", alpha = 0) +
+  # Urban Population overlaid on total population
+  geom_col(aes(y = Censuses, x = Urban_Pop), width = .6, fill = "black") +
+  labs(x = "[Millions of Inhabitants]", y = "", title = "Urban and Total Population at Each Census: 1790 to 1890") +
+  scale_y_discrete(limits = rev) +
+  # Add box to go around the census years
+  coord_cartesian(xlim = c(.4, 62)) +
+  scale_x_continuous(breaks = seq(0,60, by = 10), position = "top", limits = c(0,70)) +
+  theme_linedraw() +
+  theme(axis.title = element_text(size = 6, family = "serif",color="black"),
+        plot.title = element_text(size = 10, family = "Puritan", hjust = .5, vjust = -1, color="white"),
+        axis.title.y = element_text(hjust = .5, color="white"),
+        axis.text.y = element_text(size = 7, margin = margin(l = 20, r = -29), color="black"),
+        axis.text.x = element_text(size = 6, color="black"),
+        axis.ticks = element_blank(),
+        panel.grid.minor.x = element_blank(),
+        panel.grid.major.y = element_blank(),
+        panel.grid.major.x = element_line(size = .4),
+        panel.border = element_rect(size = .9))
+
 dev.off()
