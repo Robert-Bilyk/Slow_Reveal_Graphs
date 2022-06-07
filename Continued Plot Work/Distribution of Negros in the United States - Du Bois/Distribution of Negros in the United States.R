@@ -300,7 +300,150 @@ FinalPlot <- plot_grid(LegendPlot3, MapPlot,
 
 
 # Complete Slow Reveal
+
 MapPlot
 MapLegend1
 MapLegend2
-FinalPlot
+
+
+#Final Graph
+
+png(here::here("Continued Plot Work", "Distribution of Negros in the United States - Du Bois", "4-Final-DistN.png"),width=800,height=1000)
+
+LegendPlot3 <- ggplot(circleDF, aes(x0 = x, y0 = y, r = 0.1, fill = group)) +
+  geom_circle(color = "black") +
+  coord_equal() +
+  xlim(0, 6) +
+  ylim(-0.2, 1) +
+  scale_fill_manual(values = c("#Fbe206", "#061e73", "#E02641", "#5a2f0b", "#000000")) +
+  labs(title = "DISTRIBUTION OF NEGROES IN THE UNITED STATES.",
+       subtitle = "DISTRIBUTION DES NEGRES DAN LES E TATS UNIS.\n") +
+  theme(plot.title = element_text(hjust = 0.5, family = "Puritan", size = 20),
+        plot.subtitle = element_text(hjust = 0.5, family = "Puritan", size = 17)) +
+  annotate("text", x = 1, y = 0.3, label = "less than 1", family = "Puritan") +
+  annotate("text", x = 2, y = 0.3, label = "1-4", family = "Puritan") +
+  annotate("text", x = 3, y = 0.3, label = "4-8", family = "Puritan") +
+  annotate("text", x = 4, y = 0.3, label = "8-15", family = "Puritan") +
+  annotate("text", x = 5, y = 0.3, label = "15-25", family = "Puritan") +
+  annotate("text", x = 3, y = 0, label ="NEGROES TO THE SQUARE MILE.", family = "Puritan") +
+  theme(axis.title.x = element_blank(),
+        axis.text.x = element_blank(),
+        axis.ticks.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.text.y = element_blank(),
+        axis.ticks.y = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank()) +
+  theme(legend.position = "none")
+
+plot_grid(LegendPlot3, MapPlot,
+          labels = NA, ncol = 1)
+
+dev.off()
+
+
+#Concealed Graph
+
+png(here::here("Continued Plot Work", "Distribution of Negros in the United States - Du Bois", "1-Concealed-DistN.png"),width=800,height=1000)
+
+LegendPlot3 <- ggplot(circleDF, aes(x0 = x, y0 = y, r = 0.1, fill = group)) +
+  geom_circle(color = "white") +
+  coord_equal() +
+  xlim(0, 6) +
+  ylim(-0.2, 1) +
+  scale_fill_manual(values = c("white", "white", "white", "white", "white")) +
+  labs(title = "DISTRIBUTION OF NEGROES IN THE UNITED STATES.",
+       subtitle = "DISTRIBUTION DES NEGRES DAN LES E TATS UNIS.\n") +
+  theme(plot.title = element_text(hjust = 0.5, family = "Puritan", size = 20, color = "white"),
+        plot.subtitle = element_text(hjust = 0.5, family = "Puritan", size = 17, color = "white")) +
+  annotate("text", x = 3, y = 0, label ="NEGROES TO THE SQUARE MILE.", family = "Puritan", color = "white") +
+  theme(axis.title.x = element_blank(),
+        axis.text.x = element_blank(),
+        axis.ticks.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.text.y = element_blank(),
+        axis.ticks.y = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank()) +
+  theme(legend.position = "none")
+
+plot_grid(LegendPlot3, MapPlot,
+          labels = NA, ncol = 1)
+
+dev.off()
+
+
+#Reveal Circles
+
+png(here::here("Continued Plot Work", "Distribution of Negros in the United States - Du Bois", "2-RevealCircles-DistN.png"),width=800,height=1000)
+
+LegendPlot3 <- ggplot(circleDF, aes(x0 = x, y0 = y, r = 0.1, fill = group)) +
+  geom_circle(color = "black") +
+  coord_equal() +
+  xlim(0, 6) +
+  ylim(-0.2, 1) +
+  scale_fill_manual(values = c("#Fbe206", "#061e73", "#E02641", "#5a2f0b", "#000000")) +
+  labs(title = "DISTRIBUTION OF NEGROES IN THE UNITED STATES.",
+       subtitle = "DISTRIBUTION DES NEGRES DAN LES E TATS UNIS.\n") +
+  theme(plot.title = element_text(hjust = 0.5, family = "Puritan", size = 20, color = "white"),
+        plot.subtitle = element_text(hjust = 0.5, family = "Puritan", size = 17, color = "white")) +
+  annotate("text", x = 1, y = 0.3, label = "less than 1", family = "Puritan") +
+  annotate("text", x = 2, y = 0.3, label = "1-4", family = "Puritan") +
+  annotate("text", x = 3, y = 0.3, label = "4-8", family = "Puritan") +
+  annotate("text", x = 4, y = 0.3, label = "8-15", family = "Puritan") +
+  annotate("text", x = 5, y = 0.3, label = "15-25", family = "Puritan") +
+  annotate("text", x = 3, y = 0, label ="NEGROES TO THE SQUARE MILE.", family = "Puritan", color = "white") +
+  theme(axis.title.x = element_blank(),
+        axis.text.x = element_blank(),
+        axis.ticks.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.text.y = element_blank(),
+        axis.ticks.y = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank()) +
+  theme(legend.position = "none")
+
+plot_grid(LegendPlot3, MapPlot,
+          labels = NA, ncol = 1)
+
+dev.off()
+
+
+#Reveal Label
+
+png(here::here("Continued Plot Work", "Distribution of Negros in the United States - Du Bois", "3-RevealLabel-DistN.png"),width=800,height=1000)
+
+LegendPlot3 <- ggplot(circleDF, aes(x0 = x, y0 = y, r = 0.1, fill = group)) +
+  geom_circle(color = "black") +
+  coord_equal() +
+  xlim(0, 6) +
+  ylim(-0.2, 1) +
+  scale_fill_manual(values = c("#Fbe206", "#061e73", "#E02641", "#5a2f0b", "#000000")) +
+  labs(title = "DISTRIBUTION OF NEGROES IN THE UNITED STATES.",
+       subtitle = "DISTRIBUTION DES NEGRES DAN LES E TATS UNIS.\n") +
+  theme(plot.title = element_text(hjust = 0.5, family = "Puritan", size = 20, color = "white"),
+        plot.subtitle = element_text(hjust = 0.5, family = "Puritan", size = 17, color = "white")) +
+  annotate("text", x = 1, y = 0.3, label = "less than 1", family = "Puritan") +
+  annotate("text", x = 2, y = 0.3, label = "1-4", family = "Puritan") +
+  annotate("text", x = 3, y = 0.3, label = "4-8", family = "Puritan") +
+  annotate("text", x = 4, y = 0.3, label = "8-15", family = "Puritan") +
+  annotate("text", x = 5, y = 0.3, label = "15-25", family = "Puritan") +
+  annotate("text", x = 3, y = 0, label ="NEGROES TO THE SQUARE MILE.", family = "Puritan") +
+  theme(axis.title.x = element_blank(),
+        axis.text.x = element_blank(),
+        axis.ticks.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.text.y = element_blank(),
+        axis.ticks.y = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank()) +
+  theme(legend.position = "none")
+
+plot_grid(LegendPlot3, MapPlot,
+          labels = NA, ncol = 1)
+
+dev.off()
