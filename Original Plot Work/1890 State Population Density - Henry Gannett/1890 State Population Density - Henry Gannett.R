@@ -7,14 +7,14 @@ library(grid)
 font_add_google(name = "Courier Prime", family = "Main")
 showtext_auto()
 
-data <- read_xlsx(here::here("Plot Work", "1890 State Population Density - Henry Gannett", "Henry Gannett State Population Density 1890.xlsx")) %>%
+data <- read_xlsx(here::here("Original Plot Work", "1890 State Population Density - Henry Gannett", "Henry Gannett State Population Density 1890.xlsx")) %>%
   arrange(desc(Density))
 
 data$State <- toupper(data$State)
 
 #Final Graph
 
-png(here::here("Plot Work", "1890 State Population Density - Henry Gannett", "4-Final-State-Pop-Density-1890.png"),width=500,height=800)
+png(here::here("Original Plot Work", "1890 State Population Density - Henry Gannett", "4-Final-State-Pop-Density-1890.png"),width=500,height=800)
 
 ggplot(data, mapping = aes(x = Density, y = fct_rev(fct_inorder(State)))) +
   geom_col(color = "black", fill = "black", width = .45) +
@@ -45,7 +45,7 @@ dev.off()
 
 #Concealed Graph
 
-png(here::here("Plot Work", "1890 State Population Density - Henry Gannett", "1-Concealed-State-Pop-Density-1890.png"),width=500,height=800)
+png(here::here("Original Plot Work", "1890 State Population Density - Henry Gannett", "1-Concealed-State-Pop-Density-1890.png"),width=500,height=800)
 
 ggplot(data, mapping = aes(x = Density, y = fct_rev(fct_inorder(State)))) +
   geom_col(color = "black", fill = "black", width = .45) +
@@ -72,7 +72,7 @@ dev.off()
 
 #Reveal Density Numbers
 
-png(here::here("Plot Work", "1890 State Population Density - Henry Gannett", "2-DensityReveal-State-Pop-Density-1890.png"),width=500,height=800)
+png(here::here("Original Plot Work", "1890 State Population Density - Henry Gannett", "2-DensityReveal-State-Pop-Density-1890.png"),width=500,height=800)
 
 ggplot(data, mapping = aes(x = Density, y = fct_rev(fct_inorder(State)))) +
   geom_col(color = "black", fill = "black", width = .45) +
@@ -100,7 +100,7 @@ dev.off()
 
 #Reveal States
 
-png(here::here("Plot Work", "1890 State Population Density - Henry Gannett", "3-StateReveal-State-Pop-Density-1890.png"),width=500,height=800)
+png(here::here("Original Plot Work", "1890 State Population Density - Henry Gannett", "3-StateReveal-State-Pop-Density-1890.png"),width=500,height=800)
 
 ggplot(data, mapping = aes(x = Density, y = fct_rev(fct_inorder(State)))) +
   geom_col(color = "black", fill = "black", width = .45) +

@@ -7,7 +7,7 @@ library(grid)
 font_add_google(name = "Courier Prime", family = "Main")
 showtext_auto()
 
-data <- read_xlsx(here::here("Plot Work", "1890 State Foreign Population - Henry Gannett", "Henry Gannett State Foreign Population 1890.xlsx")) %>%
+data <- read_xlsx(here::here("Original Plot Work", "1890 State Foreign Population - Henry Gannett", "Henry Gannett State Foreign Population 1890.xlsx")) %>%
   arrange(desc(Foreign))
 
 data$State <- toupper(data$State)
@@ -15,7 +15,7 @@ data$Foreign <- data$Foreign / 1000
 
 #Final Graph
 
-png(here::here("Plot Work", "1890 State Foreign Population - Henry Gannett", "5-Final-State-Foreign-Population-1890.png"),width=500,height=800)
+png(here::here("Original Plot Work", "1890 State Foreign Population - Henry Gannett", "5-Final-State-Foreign-Population-1890.png"),width=500,height=800)
 
 ggplot(data, aes(x = Foreign, y = fct_rev(fct_inorder(State))), fill = NA) +
   geom_col(color = "black", fill = "black", width = 0.45 ) +
@@ -49,7 +49,7 @@ dev.off()
 
 #Concealed Graph
 
-png(here::here("Plot Work", "1890 State Foreign Population - Henry Gannett", "1-Concealed-State-Foreign-Population-1890.png"),width=500,height=800)
+png(here::here("Original Plot Work", "1890 State Foreign Population - Henry Gannett", "1-Concealed-State-Foreign-Population-1890.png"),width=500,height=800)
 
 ggplot(data, aes(x = Foreign, y = fct_rev(fct_inorder(State))), fill = NA) +
   geom_col(color = "black", fill = "black", width = 0.45 ) +
@@ -79,7 +79,7 @@ dev.off()
 
 #Reveal Foreigner Numbers
 
-png(here::here("Plot Work", "1890 State Foreign Population - Henry Gannett", "2-ForeignReveal-State-Foreign-Population-1890.png"),width=500,height=800)
+png(here::here("Original Plot Work", "1890 State Foreign Population - Henry Gannett", "2-ForeignReveal-State-Foreign-Population-1890.png"),width=500,height=800)
 
 ggplot(data, aes(x = Foreign, y = fct_rev(fct_inorder(State))), fill = NA) +
   geom_col(color = "black", fill = "black", width = 0.45 ) +
@@ -110,7 +110,7 @@ dev.off()
 
 #Reveal States
 
-png(here::here("Plot Work", "1890 State Foreign Population - Henry Gannett", "3-StateReveal-State-Foreign-Population-1890.png"),width=500,height=800)
+png(here::here("Original Plot Work", "1890 State Foreign Population - Henry Gannett", "3-StateReveal-State-Foreign-Population-1890.png"),width=500,height=800)
 
 ggplot(data, aes(x = Foreign, y = fct_rev(fct_inorder(State))), fill = NA) +
   geom_col(color = "black", fill = "black", width = 0.45 ) +
@@ -143,7 +143,7 @@ dev.off()
 
 # Reveal Units
 
-png(here::here("Plot Work", "1890 State Foreign Population - Henry Gannett", "4-UnitReveal-State-Foreign-Population-1890.png"),width=500,height=800)
+png(here::here("Original Plot Work", "1890 State Foreign Population - Henry Gannett", "4-UnitReveal-State-Foreign-Population-1890.png"),width=500,height=800)
 
 ggplot(data, aes(x = Foreign, y = fct_rev(fct_inorder(State))), fill = NA) +
   geom_col(color = "black", fill = "black", width = 0.45 ) +

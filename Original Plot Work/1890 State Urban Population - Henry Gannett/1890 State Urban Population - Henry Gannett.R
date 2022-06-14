@@ -7,7 +7,7 @@ library(grid)
 font_add_google(name = "Courier Prime", family = "Main")
 showtext_auto()
 
-data <- read_xlsx(here::here("Plot Work", "1890 State Urban Population - Henry Gannett", "Henry Gannett State Urban Population.xlsx")) %>%
+data <- read_xlsx(here::here("Original Plot Work", "1890 State Urban Population - Henry Gannett", "Henry Gannett State Urban Population.xlsx")) %>%
   arrange(desc(`Total Population`)) %>%
   select(`State`, `Urban Population`, `Rural Population`)
 
@@ -23,7 +23,7 @@ data <- data %>%
 
 #Full Graph
 
-png(here::here("Plot Work", "1890 State Urban Population - Henry Gannett", "6-Final-State-Urban-Pop-1890.png"),width=600,height=700)
+png(here::here("Original Plot Work", "1890 State Urban Population - Henry Gannett", "6-Final-State-Urban-Pop-1890.png"),width=600,height=700)
 
 ggplot(data) +
   geom_col(aes(x = Population, y = fct_rev(fct_inorder(State)), fill= Location), color= "black", width = 0.45) +
@@ -62,7 +62,7 @@ dev.off()
 
 #Full Concealed
 
-png(here::here("Plot Work", "1890 State Urban Population - Henry Gannett", "1-Concealed-State-Urban-Pop-1890.png"),width=600,height=700)
+png(here::here("Original Plot Work", "1890 State Urban Population - Henry Gannett", "1-Concealed-State-Urban-Pop-1890.png"),width=600,height=700)
 
 ggplot(data) +
   geom_col(aes(x = Population, y = fct_rev(fct_inorder(State)), fill= Location), color= "black", width = 0.45) +
@@ -93,7 +93,7 @@ dev.off()
 
 #Reveal Population
 
-png(here::here("Plot Work", "1890 State Urban Population - Henry Gannett", "2-RevealPop-State-Urban-Pop-1890.png"),width=600,height=700)
+png(here::here("Original Plot Work", "1890 State Urban Population - Henry Gannett", "2-RevealPop-State-Urban-Pop-1890.png"),width=600,height=700)
 
 ggplot(data) +
   geom_col(aes(x = Population, y = fct_rev(fct_inorder(State)), fill= Location), color= "black", width = 0.45) +
@@ -125,7 +125,7 @@ dev.off()
 
 #Reveal States
 
-png(here::here("Plot Work", "1890 State Urban Population - Henry Gannett", "3-RevealStates-State-Urban-Pop-1890.png"),width=600,height=700)
+png(here::here("Original Plot Work", "1890 State Urban Population - Henry Gannett", "3-RevealStates-State-Urban-Pop-1890.png"),width=600,height=700)
 
 ggplot(data) +
   geom_col(aes(x = Population, y = fct_rev(fct_inorder(State)), fill= Location), color= "black", width = 0.45) +
@@ -159,7 +159,7 @@ dev.off()
 
 #Reveal Units
 
-png(here::here("Plot Work", "1890 State Urban Population - Henry Gannett", "4-RevealUnits-State-Urban-Pop-1890.png"),width=600,height=700)
+png(here::here("Original Plot Work", "1890 State Urban Population - Henry Gannett", "4-RevealUnits-State-Urban-Pop-1890.png"),width=600,height=700)
 
 ggplot(data) +
   geom_col(aes(x = Population, y = fct_rev(fct_inorder(State)), fill= Location), color= "black", width = 0.45) +
@@ -194,7 +194,7 @@ dev.off()
 
 #Reveal Bar Colors
 
-png(here::here("Plot Work", "1890 State Urban Population - Henry Gannett", "5-RevealBars-State-Urban-Pop-1890.png"),width=600,height=700)
+png(here::here("Original Plot Work", "1890 State Urban Population - Henry Gannett", "5-RevealBars-State-Urban-Pop-1890.png"),width=600,height=700)
 
 ggplot(data) +
   geom_col(aes(x = Population, y = fct_rev(fct_inorder(State)), fill= Location), color= "black", width = 0.45) +

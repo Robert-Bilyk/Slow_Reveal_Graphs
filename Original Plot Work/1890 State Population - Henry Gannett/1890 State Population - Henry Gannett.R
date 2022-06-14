@@ -7,7 +7,7 @@ library(grid)
 font_add_google(name = "Courier Prime", family = "Main")
 showtext_auto()
 
-data <- read_xlsx(here::here("Plot Work", "1890 State Population - Henry Gannett", "Henry Gannett Total State Population 1890.xlsx")) %>%
+data <- read_xlsx(here::here("Original Plot Work", "1890 State Population - Henry Gannett", "Henry Gannett Total State Population 1890.xlsx")) %>%
   arrange(Population)
 
 data$State <- toupper(data$State)
@@ -16,7 +16,7 @@ data$pop <- data$Population / 100000
 
 #Full Graph
 
-png(here::here("Plot Work", "1890 State Population - Henry Gannett", "5-Final-State-Pop-1890.png"),width=500,height=800)
+png(here::here("Original Plot Work", "1890 State Population - Henry Gannett", "5-Final-State-Pop-1890.png"),width=500,height=800)
 
 ggplot(data, aes(x = pop, y = fct_rev(fct_inorder(State))), fill = NA) +
   geom_col(color = "black", fill = "black", width = 0.45, ) +
@@ -50,7 +50,7 @@ dev.off()
 
 #Fully Concealed
 
-png(here::here("Plot Work", "1890 State Population - Henry Gannett", "1-Concealed-State-Pop-1890.png"),width=500,height=800)
+png(here::here("Original Plot Work", "1890 State Population - Henry Gannett", "1-Concealed-State-Pop-1890.png"),width=500,height=800)
 
 ggplot(data, aes(x = pop, y = fct_rev(fct_inorder(State))), fill = NA) +
   geom_col(color = "black", fill = "black", width = 0.45, ) +
@@ -81,7 +81,7 @@ dev.off()
 
 #Reveal Population Numbers
 
-png(here::here("Plot Work", "1890 State Population - Henry Gannett", "2-Pop-Reveal-State-Pop-1890.png"),width=500,height=800)
+png(here::here("Original Plot Work", "1890 State Population - Henry Gannett", "2-Pop-Reveal-State-Pop-1890.png"),width=500,height=800)
 
 ggplot(data, aes(x = pop, y = fct_rev(fct_inorder(State))), fill = NA) +
   geom_col(color = "black", fill = "black", width = 0.45, ) +
@@ -113,7 +113,7 @@ dev.off()
 
 #Add States
 
-png(here::here("Plot Work", "1890 State Population - Henry Gannett", "3-State-Reveal-State-Pop-1890.png"),width=500,height=800)
+png(here::here("Original Plot Work", "1890 State Population - Henry Gannett", "3-State-Reveal-State-Pop-1890.png"),width=500,height=800)
 
 ggplot(data, aes(x = pop, y = fct_rev(fct_inorder(State))), fill = NA) +
   geom_col(color = "black", fill = "black", width = 0.45, ) +
@@ -147,7 +147,7 @@ dev.off()
 
 # Add Units
 
-png(here::here("Plot Work", "1890 State Population - Henry Gannett", "4-Unit-Reveal-State-Pop-1890.png"),width=500,height=800)
+png(here::here("Original Plot Work", "1890 State Population - Henry Gannett", "4-Unit-Reveal-State-Pop-1890.png"),width=500,height=800)
 
 ggplot(data, aes(x = pop, y = fct_rev(fct_inorder(State))), fill = NA) +
   geom_col(color = "black", fill = "black", width = 0.45, ) +
