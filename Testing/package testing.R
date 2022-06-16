@@ -1,23 +1,55 @@
 library(tidyverse)
-library(showtext)
-library(readxl)
-library(srthemes)
-
-data <- read_xlsx(here::here("Original Plot Work", "1890 State Population - Henry Gannett", "Henry Gannett Total State Population 1890.xlsx")) %>%
-  arrange(Population)
-
-data$State <- toupper(data$State)
-data$pop <- data$Population / 100000
-
-
-#Full Graph
+library(srtools)
 
 png(here::here("Testing", "package_image_test.png"),width=500,height=800)
 
-ggplot(data, aes(x = pop, y = fct_rev(fct_inorder(State))), fill = NA) +
+ggplot(states, aes(x = Pop, y = fct_rev(fct_inorder(State))), fill = NA) +
   geom_col(color = "black", fill = "black", width = 0.45, ) +
-  labs(title = "6. POPULATION OF EACH STATE AND TERRITORY: 1890",
-       subtitle = "(Hundreds of thousands.)") +
+  labs(title = "POPULATION OF EACH STATE",
+       subtitle = "(Population in 2021)",
+       x = "Population",
+       y = "State")
+
+dev.off()
+
+
+png(here::here("Testing", "package_image_test_2.png"),width=500,height=800)
+
+ggplot(states, aes(x = Pop, y = fct_rev(fct_inorder(State))), fill = NA) +
+  geom_col(color = "black", fill = "black", width = 0.45, ) +
+  labs(title = "POPULATION OF EACH STATE",
+       subtitle = "(Population in 2021)",
+       x = "Population",
+       y = "State") +
   theme_hga()
 
 dev.off()
+
+
+
+png(here::here("Testing", "package_image_test_3.png"),width=500,height=800)
+
+ggplot(states, aes(x = Pop, y = fct_rev(fct_inorder(State))), fill = NA) +
+  geom_col(color = "black", fill = "black", width = 0.45, ) +
+  labs(title = "POPULATION OF EACH STATE",
+       subtitle = "(Population in 2021)",
+       x = "Population",
+       y = "State") +
+  theme_dub()
+
+dev.off()
+
+
+png(here::here("Testing", "package_image_test_4.png"),width=500,height=800)
+
+ggplot(states, aes(x = Pop, y = fct_rev(fct_inorder(State))), fill = NA) +
+  geom_col(color = "black", fill = "black", width = 0.45, ) +
+  labs(title = "POPULATION OF EACH STATE",
+       subtitle = "(Population in 2021)",
+       x = "Population",
+       y = "State") +
+  hide_axistext()
+
+dev.off()
+
+
