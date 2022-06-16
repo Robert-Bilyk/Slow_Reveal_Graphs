@@ -18,6 +18,6 @@ ggplot(data, aes(x = pop, y = fct_rev(fct_inorder(State))), fill = NA) +
   geom_col(color = "black", fill = "black", width = 0.45, ) +
   labs(title = "6. POPULATION OF EACH STATE AND TERRITORY: 1890",
        subtitle = "(Hundreds of thousands.)") +
-  theme_dub()
+  theme_hga()
 
 dev.off()

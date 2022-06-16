@@ -163,10 +163,16 @@ grid.draw(textGrob("N.H.", x=.875,y=.7, gp=gpar(fontsize=8, fontfamily="Main")))
 grid.draw(rectGrob(x= .91, y= .75, width = .03, height = .025))
 grid.draw(textGrob("ME.", x=.91,y=.75, gp=gpar(fontsize=8, fontfamily="Main")))
 grid.draw(textGrob("VER. \n1917", x=.86,y=.76, gp=gpar(fontsize=8, fontfamily="Main")))
+
 grid.draw(circleGrob(x=.715,y=.235, r=.0065))
 grid.draw(circleGrob(x=.715,y=.235, r=.0005))
+
 grid.draw(circleGrob(x=.705,y=.565, r=.0065))
 grid.draw(circleGrob(x=.705,y=.565, r=.0005))
+
+grid.draw(circleGrob(x=.762,y=.045, r=.0065))
+grid.draw(circleGrob(x=.762,y=.045, r=.0005))
+
 grid.draw(textGrob("?", x=.65,y=.565, gp=gpar(fontsize=20, fontfamily="Main", col = "white")))
 
 grid.draw(segmentsGrob(x0 = 0.550, x1 = 0.558, y0 = 0.4, y1 = 0.4))
@@ -174,12 +180,10 @@ grid.draw(segmentsGrob(x0 = 0.554, x1 = 0.554, y0 = 0.394, y1 = 0.406))
 grid.draw(segmentsGrob(x0 = 0.551, x1 = 0.557, y0 = 0.395, y1 = 0.405))
 grid.draw(segmentsGrob(x0 = 0.551, x1 = 0.557, y0 = 0.405, y1 = 0.395))
 
-grid.draw(segmentsGrob(x0 = 0.056, x1 = 0.064, y0 = 0.045, y1 = 0.045))
-grid.draw(segmentsGrob(x0 = 0.06, x1 = 0.06, y0 = 0.039, y1 = 0.051))
-grid.draw(segmentsGrob(x0 = 0.057, x1 = 0.063, y0 = 0.04, y1 = 0.05))
-grid.draw(segmentsGrob(x0 = 0.057, x1 = 0.063, y0 = 0.05, y1 = 0.04))
-
+grid.draw(segmentsGrob(x0 = 0.165, x1 = 0.173, y0 = 0.045, y1 = 0.045))
+grid.draw(segmentsGrob(x0 = 0.169, x1 = 0.169, y0 = 0.039, y1 = 0.051))
+grid.draw(segmentsGrob(x0 = 0.166, x1 = 0.172, y0 = 0.04, y1 = 0.05))
+grid.draw(segmentsGrob(x0 = 0.166, x1 = 0.172, y0 = 0.05, y1 = 0.04))
 
 
 dev.off()
-

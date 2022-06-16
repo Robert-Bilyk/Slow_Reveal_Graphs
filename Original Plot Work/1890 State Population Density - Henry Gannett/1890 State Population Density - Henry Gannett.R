@@ -39,7 +39,7 @@ grid.draw(segmentsGrob(x0 = 0.005, x1 = 0.977, y0 = 0.96, y1 = 0.96))
 grid.draw(segmentsGrob(x0 = 0.005, x1 = 0.977, y0 = 0.98, y1 = 0.98))
 grid.draw(segmentsGrob(x0 = 0.005, x1 = 0.977, y0 = 0.012, y1 = 0.012))
 grid.draw(textGrob("STATES.", x=.13,y=.969, gp=gpar(fontsize=8, fontfamily="Main")))
-grid.draw(textGrob("NUMBER OF INHABITANTS TO THE SQUARE MILE, BY STATES AND TERRITORIES: 1890", x=.5, y=.99, gp=gpar(fontsize=7, fontfamily="Main")))
+grid.draw(textGrob("8. NUMBER OF INHABITANTS TO THE SQUARE MILE, BY STATES AND TERRITORIES: 1890", x=.5, y=.99, gp=gpar(fontsize=7, fontfamily="Main")))
 
 dev.off()
 
