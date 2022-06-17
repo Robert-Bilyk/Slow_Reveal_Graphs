@@ -49,3 +49,6 @@ p = ggplot(ref, aes(x = x, y = y))+
   geom_ribbon(aes(x = x, ymin = 0, ymax = y), fill = "lightblue")
 
 p
+
+
+grid.draw(segmentsGrob(x0 = 0.01, x1 = 0.01, y0 = 0.045, y1 = 0.968, gp= gpar(lwd =5, lty = 4)))
