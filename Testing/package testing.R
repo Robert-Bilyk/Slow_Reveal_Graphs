@@ -53,3 +53,18 @@ ggplot(states, aes(x = Pop, y = fct_rev(fct_inorder(State))), fill = NA) +
 dev.off()
 
 
+png(here::here("Testing", "package_image_test_5.png"),width=500,height=800)
+
+ggplot(states, aes(x = Pop, y = fct_rev(fct_inorder(State))), fill = NA) +
+  geom_col(color = "black", fill = "black", width = 0.45, ) +
+  labs(title = "POPULATION OF EACH STATE",
+       subtitle = "(Population in 2021)",
+       tag = "tag example",
+       caption = "caption example",
+       x = "Population",
+       y = "State") +
+  hide_axistitle()
+
+dev.off()
+
+
