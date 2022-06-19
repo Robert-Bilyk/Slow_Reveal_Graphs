@@ -59,7 +59,7 @@ gap <- ggplot() + theme_void()
 
 
 
-png(here::here("Original Plot Work", "1906 - 1913 Tuberculosis Mortality Country&Town", "Final-State-Pop-1890.png"),width=1000,height=700)
+png(here::here("Original Plot Work", "1906 - 1913 Tuberculosis Mortality Country&Town", "Tuberculosis Mortality for Countries and Towns-1906-1917.png"),width=1000,height=700)
 
 ggarrange(gap,
           ggarrange(gap, countryplot, gap, townplot, gap, ncol=5, widths = c(.1, .5, .15, .5, .1)),
