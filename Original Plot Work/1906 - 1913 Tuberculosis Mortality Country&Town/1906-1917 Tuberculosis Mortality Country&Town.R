@@ -8,8 +8,6 @@ library(ggpubr)
 font_add_google(name = "Cagliostro", family = "Main")
 showtext_auto()
 
-#text <- paste("En Angleterre, en France et aux Etats- Unis \ndurant les annees 1906 a 1913.*", sep = "")
-
 country <- read_xlsx(here::here("Original Plot Work", "1906 - 1913 Tuberculosis Mortality Country&Town", "Tuberculosis Countries.xlsx")) 
 
 country$Country <- country$Country %>%
@@ -139,7 +137,7 @@ grid.draw(segmentsGrob(x0 = 0, x1 = 1, y0 = 0.9, y1 = 0.9, gp = gpar(lwd = 5)))
 grid.draw(segmentsGrob(x0 = 0, x1 = 1, y0 = 0.89, y1 = 0.89))
 
 grid.draw(textGrob("En Angleterre, en France et aux Etats - Unis", x=.5,y=.98, gp=gpar(fontsize=26, fontfamily = "serif")))
-grid.draw(textGrob("durant les annees 1906 a 1913.*", x=.5,y=.928, gp=gpar(fontsize=26, fontfamily = "serif")))
+grid.draw(textGrob("durant les années 1906 à 1913.*", x=.5,y=.928, gp=gpar(fontsize=26, fontfamily = "serif")))
 grid.draw(textGrob("Year:", x=.082, y=.124, gp=gpar(fontsize=14, fontfamily = "Main")))
 grid.draw(textGrob("3513", x=.92, y=.05, gp=gpar(fontsize=30, fontfamily = "Main")))
 
