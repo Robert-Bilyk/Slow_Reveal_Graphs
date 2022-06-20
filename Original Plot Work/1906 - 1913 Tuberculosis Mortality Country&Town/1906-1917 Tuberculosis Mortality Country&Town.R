@@ -182,9 +182,9 @@ grid.draw(textGrob("1.37", x=.382, y=.32, gp=gpar(fontsize=7, fontfamily = "Main
 grid.draw(textGrob("1.35", x=.423, y=.317, gp=gpar(fontsize=7, fontfamily = "Main")))
 
 
-grid.draw(textGrob("Paris", x=.585, y=.745, gp=gpar(fontsize=7, fontfamily = "Main")))
+grid.draw(textGrob("Paris", x=.585, y=.73, gp=gpar(fontsize=7, fontfamily = "Main")))
 grid.draw(textGrob("4.49", x=.562, y=.71, gp=gpar(fontsize=7, fontfamily = "Main")))
-grid.draw(textGrob("4.84", x=.617, y=.76, gp=gpar(fontsize=7, fontfamily = "Main")))
+grid.draw(textGrob("4.84", x=.617, y=.735, gp=gpar(fontsize=7, fontfamily = "Main")))
 grid.draw(textGrob("4.50", x=.658, y=.725, gp=gpar(fontsize=7, fontfamily = "Main")))
 grid.draw(textGrob("4.18", x=.7, y=.685, gp=gpar(fontsize=7, fontfamily = "Main")))
 grid.draw(textGrob("4.15", x=.742, y=.673, gp=gpar(fontsize=7, fontfamily = "Main")))
