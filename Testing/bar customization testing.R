@@ -51,4 +51,4 @@ p = ggplot(ref, aes(x = x, y = y))+
 p
 
 
-grid.draw(segmentsGrob(x0 = 0.01, x1 = 0.01, y0 = 0.045, y1 = 0.968, gp= gpar(lwd =5, lty = 4)))
+grid.draw(segmentsGrob(x0 = 0.01, x1 = 0.01, y0 = 0.045, y1 = 0.968, gp= gpar(lwd =200, lty = 4)))
