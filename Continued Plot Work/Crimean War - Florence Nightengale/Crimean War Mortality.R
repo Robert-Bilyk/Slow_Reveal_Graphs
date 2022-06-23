@@ -77,7 +77,7 @@ plot1 <- ggplot(chart2) +
 
 #Area for each plot on patchwork
 layout <- c(
-  area(t = 3, l = 1, b = 20, r = 5),
+  area(t = 4.5, l = 1, b = 20, r = 5),
   area(t = 0, l = 5, b = 25, r = 10),
   area(t = 0, l = 0, b =25, r = 10)
 )
@@ -97,6 +97,7 @@ print(picture)
 # Use magick to add lines and caption at bottom
 img <- image_draw(picture)
 text(120, 755, "The Areas of the blue, red, & black wedges are each measured from\n  the centre as the common vertex.\nThe blue wedges are measured from the centre of the circle represent area\n  for area the deaths from Preventible or Mitigable Zymotic diseases; the\n  red wedges measured from the centre the deaths from wounds; & the\n  black wedges measured from the centre the deaths from all other causes.\nThe black line across the red triangle in Nov. 1854 marks the boundary\n  of the deaths from all other causes during the month\nIn October 1854, & April 1855; the black area coincides with the red;\n  in January & February 1855; the blue coincides with the black\nThe entire areas may be compared by following the blue, the red, & the\n  black lines enclosing them.", family = "Charm", cex = 1.3, srt = 0, adj=0, lheight=1.2)
+text(1200,875, "Harrison & Sons St Martins Lane", family ="Charm")
 # Two dotted segments connecting the graphs
 segments(x0=450,y0=572, x1=713,y1=492, lwd = 1, lty = "dotted")
 segments(x0=450,y0=572, x1=160,y1=479, lwd = 1, lty = "dotted")
