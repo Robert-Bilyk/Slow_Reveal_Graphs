@@ -114,6 +114,7 @@ grid.draw(textGrob("108", x=.652, y=.505, gp=gpar(fontsize=7, fontfamily = "Main
 grid.draw(textGrob("99", x=.722, y=.478, gp=gpar(fontsize=7, fontfamily = "Main")))
 grid.draw(textGrob("99", x=.792, y=.475, gp=gpar(fontsize=7, fontfamily = "Main")))
 grid.draw(textGrob("94", x=.873, y=.475, gp=gpar(fontsize=7, fontfamily = "Main")))
+grid.draw(textGrob("ENGLAND AND WALES", x=.815, y=.45, gp=gpar(fontsize=7, fontfamily = "Main")))
 
 
 grid.draw(textGrob("FRANCE", x=.155, y=.63, gp=gpar(fontsize=7, fontfamily = "Main")))
@@ -128,6 +129,7 @@ grid.draw(textGrob("114", x=.652, y=.55, gp=gpar(fontsize=7, fontfamily = "Main"
 grid.draw(textGrob("110", x=.722, y=.54, gp=gpar(fontsize=7, fontfamily = "Main")))
 grid.draw(textGrob("130", x=.792, y=.605, gp=gpar(fontsize=7, fontfamily = "Main")))
 grid.draw(textGrob("114", x=.873, y=.54, gp=gpar(fontsize=7, fontfamily = "Main")))
+grid.draw(textGrob("FRANCE", x=.845, y=.58, gp=gpar(fontsize=7, fontfamily = "Main")))
 
 
 grid.draw(textGrob("NEW YORK STATE", x=.178, y=.675, gp=gpar(fontsize=7, fontfamily = "Main")))
@@ -142,5 +144,16 @@ grid.draw(textGrob("109", x=.652, y=.532, gp=gpar(fontsize=7, fontfamily = "Main
 grid.draw(textGrob("105", x=.722, y=.5, gp=gpar(fontsize=7, fontfamily = "Main")))
 grid.draw(textGrob("110", x=.792, y=.535, gp=gpar(fontsize=7, fontfamily = "Main")))
 grid.draw(textGrob("91", x=.873, y=.46, gp=gpar(fontsize=7, fontfamily = "Main")))
+grid.draw(textGrob("NEW YORK STATE", x=.85, y=.52, gp=gpar(fontsize=7, fontfamily = "Main")))
+
+grid.draw(textGrob("GERMANY", x=.16, y=.755, gp=gpar(fontsize=7, fontfamily = "Main")))
+grid.draw(textGrob("185", x=.145, y=.793, gp=gpar(fontsize=7, fontfamily = "Main")))
+grid.draw(textGrob("176", x=.215, y=.742, gp=gpar(fontsize=7, fontfamily = "Main")))
+grid.draw(textGrob("178", x=.29, y=.745, gp=gpar(fontsize=7, fontfamily = "Main")))
+grid.draw(textGrob("170", x=.362, y=.745, gp=gpar(fontsize=7, fontfamily = "Main")))
+grid.draw(textGrob("162", x=.425, y=.695, gp=gpar(fontsize=7, fontfamily = "Main")))
+grid.draw(textGrob("192", x=.507, y=.818, gp=gpar(fontsize=7, fontfamily = "Main")))
+grid.draw(textGrob("147", x=.579, y=.645, gp=gpar(fontsize=7, fontfamily = "Main")))
+grid.draw(textGrob("151", x=.652, y=.675, gp=gpar(fontsize=7, fontfamily = "Main")))
 
 dev.off()
