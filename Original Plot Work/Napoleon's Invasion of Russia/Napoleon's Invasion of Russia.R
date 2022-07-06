@@ -9,10 +9,9 @@ font_add_google(name = "Great Vibes", family = "Main")
 font_add_google(name = "Charm", family = "Map")
 font_add_google(name = "Elsie", family = "Misc")
 font_add_google(name = "Lovers Quarrel", family = "Title")
-
-
 showtext_auto()
 
+#Adding Dimensions
 gap <- ggplot() + theme_void() + 
   theme(plot.background = element_rect(color = "#d7d2bf", fill = "#d7d2bf"))
         
@@ -20,19 +19,20 @@ picture <- image_graph(width = 2000, height = 900)
 gap 
 dev.off()
 
-
-neim <- image_read(here::here("Original Plot Work", "Napoleon's Invasion of Russia", "Neim.png"))
+#Uploading River Images to put into map
+neim <- image_read(here::here("Original Plot Work", "Napoleon's Invasion of Russia", "Rivers", "Neim.png"))
 plot(as.raster(neim))
-mosk <- image_read(here::here("Original Plot Work", "Napoleon's Invasion of Russia", "Mosk.PNG"))
+mosk <- image_read(here::here("Original Plot Work", "Napoleon's Invasion of Russia", "Rivers", "Mosk.PNG"))
 plot(as.raster(mosk))
-dorg <- image_read(here::here("Original Plot Work", "Napoleon's Invasion of Russia", "Dorg.PNG"))
+dorg <- image_read(here::here("Original Plot Work", "Napoleon's Invasion of Russia", "Rivers", "Dorg.PNG"))
 plot(as.raster(dorg))
-orsh <- image_read(here::here("Original Plot Work", "Napoleon's Invasion of Russia", "Orsh.PNG"))
+orsh <- image_read(here::here("Original Plot Work", "Napoleon's Invasion of Russia", "Rivers", "Orsh.PNG"))
 plot(as.raster(orsh))
-bere <- image_read(here::here("Original Plot Work", "Napoleon's Invasion of Russia", "Bere.PNG"))
+bere <- image_read(here::here("Original Plot Work", "Napoleon's Invasion of Russia", "Rivers", "Bere.PNG"))
 plot(as.raster(bere))
 
 
+#Drawing the map
 img <- image_draw(picture)
 
 #Black Lines 
