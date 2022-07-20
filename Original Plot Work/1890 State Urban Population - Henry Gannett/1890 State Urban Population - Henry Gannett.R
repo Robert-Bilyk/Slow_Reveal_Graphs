@@ -2,6 +2,7 @@ library(tidyverse)
 library(showtext)
 library(readxl)
 library(grid)
+library(srtools)
 
 
 font_add_google(name = "Courier Prime", family = "Main")
@@ -68,12 +69,12 @@ ggplot(data) +
   geom_col(aes(x = Population, y = fct_rev(fct_inorder(State)), fill= Location), color= "black", width = 0.45) +
   scale_fill_manual(values = c("#f1d9b5", "black")) +
   scale_x_continuous(position = "top", limits = c(0,6), breaks=seq(1,5,1)) +
-  theme(axis.text.x = element_text(family = "Main", size = 6, color= "#f1d9b5"),
+  theme(axis.text.x = element_text(family = "Main", size = 6, color= "black"),
         axis.title.x = element_blank(), 
         panel.grid.major.x = element_line(color="black", size=.25),
         axis.ticks.y = element_blank(), 
         axis.title.y = element_blank(),
-        axis.text.y = element_text(family = "Main", hjust = 0, size = 8, color = "#f1d9b5"),
+        axis.text.y = element_text(family = "Main", hjust = 0, size = 8, color = "black"),
         panel.grid.major.y = element_blank(),
         panel.grid.minor = element_blank(),
         panel.background = element_blank(),
@@ -82,8 +83,9 @@ ggplot(data) +
         plot.tag = element_blank(),
         plot.tag.position = "top",
         plot.margin = margin(30,10,30,10),
-        legend.position = "none")
-
+        legend.position = "none") +
+        hide(hidden = c("xtext", "ytext"), colour = "#f1d9b5")
+       
 grid.draw(segmentsGrob(x0 = 0.95, x1 = 0.95, y0 = 0.045, y1 = 0.944))
 grid.draw(segmentsGrob(x0 = 0.21, x1 = 0.21, y0 = 0.045, y1 = 0.944))
 grid.draw(segmentsGrob(x0 = 0.21, x1 = 0.95, y0 = 0.944, y1 = 0.944))
