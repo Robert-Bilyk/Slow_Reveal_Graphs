@@ -254,5 +254,5 @@ text(1947, 886, expression(""^"o"*"C ("^"o"*"F)"), family = "Map", cex = 1, col 
 
 dev.off()
 
-
+ 
 image_write(img, path = here::here("Original Plot Work", "Napoleon's Invasion of Russia", "Napoleon's Invasion of Russia Translated.png"), format = "png")
