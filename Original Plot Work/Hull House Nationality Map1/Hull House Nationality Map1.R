@@ -2805,4 +2805,3 @@ segments(x0=730, x1=1290, y0=885, y1=885, lwd = 1, lty = "solid")
 dev.off()
 
 image_write(img, path = here::here("Original Plot Work", "Hull House Nationality Map1", "National1-Hullhouse.png"), format = "png")
-
